@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head th:replace="layout/layout :: head"></head>
+<body>
+	<header th:replace="layout/layout :: header"></header>
+	<table class="table table-bordered table-striped my-4">
+		<thead>
+			<tr>
+				<th>id</th>
+				<th>turno</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="turno : ${turnos}">
+				<td th:text="${turno.id}"></td>
+				<td th:text="${turno.turno}"></td>
+			</tr>
+		</tbody>
+	</table>
+	<footer th:replace="layout/layout :: footer"></footer>
+</body>
+</html>
